@@ -11,7 +11,8 @@ static blk_hash get_rand_hash() {
 }
 
 Block::Block(blk_index idx, std::vector<Transaction> &&v)
-: index{idx}, hash{}, transactions{v} {
+: transactions{v}, index{idx}, hash{get_rand_hash()}
+{
     time(&timestamp);
 }
 
@@ -21,5 +22,9 @@ Block &Block::operator=(Block &&b) {
 }
 
 Block &Block::operator=(const Block &b) {
+    this->hash = b.hash;
+    this->index = b.index;
+    this->timestamp = b.timestamp;
+    this->transactions = b.transactions;
     return *this;
 }

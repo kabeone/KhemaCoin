@@ -1,6 +1,5 @@
 #include <vector>
 #include "../Inc/Chain.hpp"
-#include "../Inc/Block.hpp"
 
 Chain::Chain() {
     this->chain = std::vector<Block>();

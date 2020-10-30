@@ -1,7 +1,8 @@
 #include "../Inc/Chain.hpp"
-
+#include "hash/Inc/Sha.hpp"
 
 int main() {
-    Chain c {};
+    Sha b {};
+    //Chain c {};
     return 0;
 }
